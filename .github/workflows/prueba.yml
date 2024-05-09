@@ -16,6 +16,8 @@ jobs:
         #Definimos los pasos que se ejecutarán en este trabajo.
         steps:
             #Nombre de nuestro paso: primer_paso
-            - name: Imprime un mensaje
-                #Definimos la acción que se ejecutará en este paso.
-              run: echo "Hola, mundo!"
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: List file details
+              run: ls -la 
